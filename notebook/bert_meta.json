@@ -1,0 +1,11 @@
+{
+  "model": "bert-base-uncased",
+  "accuracy": 0.6888888888888889,
+  "precision_macro": 0.7442770484034029,
+  "recall_macro": 0.6888888888888888,
+  "f1_macro": 0.672748961506509,
+  "epochs": 4,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "trained_at": "2026-05-13T02:01:40.275313Z"
+}

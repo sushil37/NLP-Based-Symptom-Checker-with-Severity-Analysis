@@ -1,0 +1,32 @@
+# =============================================================================
+# Symptom Triage Journal — project requirements
+# =============================================================================
+# Covers the notebook (EDA, plots, modelling), the training scripts under src/,
+# the example replayer under examples/, and the Streamlit application.
+#
+# Tested on Python 3.10–3.11.
+#
+# Install:
+#     pip install -r requirements.txt
+# =============================================================================
+
+# --- Core scientific stack ---------------------------------------------------
+numpy>=1.24,<3.0
+pandas>=2.0,<3.0
+scikit-learn>=1.3,<2.0
+joblib>=1.3,<2.0
+
+# --- Plotting & notebook -----------------------------------------------------
+matplotlib>=3.7,<4.0
+seaborn>=0.12,<1.0
+jupyter>=1.0
+notebook>=7.0
+
+# --- Streamlit application ---------------------------------------------------
+streamlit>=1.30,<2.0
+altair>=5.0,<6.0
+
+# --- Optional: BERT fine-tuning (notebook/bert_finetune_colab.ipynb, GPU) ----
+# Run on Google Colab (GPU) — uncomment for local install if a CUDA GPU is present.
+# torch>=2.0,<3.0
+# transformers>=4.40,<5.0

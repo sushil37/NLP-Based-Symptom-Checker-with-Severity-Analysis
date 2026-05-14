@@ -1,0 +1,62 @@
+{
+  "description": "Reproducible inputs and expected outputs for the Symptom Triage Journal. Used by examples/run_examples.py to demonstrate end-to-end inference. Probabilities will vary slightly with sklearn version but disease + severity should match.",
+  "model": "artifacts/calibrated_svm_pipeline.joblib",
+  "examples": [
+    {
+      "id": "common_cold",
+      "input": "I have a runny nose, sore throat and mild cough since yesterday.",
+      "expected": {
+        "disease_in_top3": ["allergy", "common cold"],
+        "severity": "Mild",
+        "red_flags_hit": []
+      }
+    },
+    {
+      "id": "cardiac_emergency",
+      "input": "Severe chest pain and shortness of breath, sweating a lot.",
+      "expected": {
+        "disease_in_top3": ["pneumonia"],
+        "severity": "Urgent",
+        "severity_source": "red_flag_override",
+        "red_flags_hit": ["chest pain", "shortness of breath"]
+      }
+    },
+    {
+      "id": "uti",
+      "input": "Burning urination and frequent urge to go to the bathroom.",
+      "expected": {
+        "disease_in_top3": ["urinary tract infection"],
+        "severity": "Moderate",
+        "red_flags_hit": []
+      }
+    },
+    {
+      "id": "jaundice",
+      "input": "Yellow skin, dark urine and constant fatigue for a week.",
+      "expected": {
+        "disease_in_top3": ["jaundice"],
+        "severity": "Urgent",
+        "red_flags_hit": []
+      }
+    },
+    {
+      "id": "malaria_high_fever_red_flag",
+      "input": "High fever with shaking chills, severe pain in muscles, and sweating profusely.",
+      "expected": {
+        "disease_in_top3": ["malaria", "dengue"],
+        "severity": "Urgent",
+        "severity_source": "red_flag_override",
+        "red_flags_hit": ["severe pain", "high fever"]
+      }
+    },
+    {
+      "id": "chickenpox",
+      "input": "Itchy red blisters all over body with mild fever.",
+      "expected": {
+        "disease_in_top3": ["chicken pox"],
+        "severity": "Moderate",
+        "red_flags_hit": []
+      }
+    }
+  ]
+}

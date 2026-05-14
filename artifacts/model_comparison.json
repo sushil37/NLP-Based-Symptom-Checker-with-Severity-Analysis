@@ -1,0 +1,22 @@
+{
+  "trained_at": "2026-05-14T15:00:20.180837+00:00",
+  "n_classes": 24,
+  "n_train": 840,
+  "n_test": 360,
+  "models": {
+    "svm_tfidf": {
+      "name": "TF-IDF (word 1-2g) + Calibrated LinearSVC",
+      "accuracy": 0.9472222222222222,
+      "precision_macro": 0.9508587715389186,
+      "recall_macro": 0.9472222222222223,
+      "f1_macro": 0.9463953755521933
+    },
+    "logreg_charword": {
+      "name": "TF-IDF (word + char 3-5g) + Logistic Regression",
+      "accuracy": 0.9722222222222222,
+      "precision_macro": 0.9739174836601308,
+      "recall_macro": 0.9722222222222223,
+      "f1_macro": 0.9720663225894732
+    }
+  }
+}
